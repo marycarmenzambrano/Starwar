@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const Personajes = () =>{
     const {store,actions} = useContext(Context);
         return <div className="container text-center">
-                    <h1>LISTADO DE PERSONAJES SW</h1>
+                    <h1>Personajes</h1>
                     <div className="row">
                         {store.personajes.map((object,index)=>{
                              return (<ListadoCard 
@@ -14,7 +14,7 @@ export const Personajes = () =>{
                                         uid = {object.uid}
                                         ruta = {"/personajes/"+object.uid}
                                         key={index}
-                                        favorito="🖤"
+                                        favorito="🤍"
                                         
                                      /> 
                                     

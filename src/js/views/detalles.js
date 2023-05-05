@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { object } from "prop-types";
 import { DetalleCard } from "../component/card";
 
-//retornar detalles de los planetas//
+
 export const DetallePlanetas = (props)=> {
 
     const {id} = useParams();
@@ -22,7 +22,7 @@ export const DetallePlanetas = (props)=> {
             <img src="https://pm1.narvii.com/6361/c338000011dddc976bc1e960bf83c6a04402b720_hq.jpg"/>
         </div>
         <div className="row-7">
-        <p>Aqui va la descripcion del planeta seleccionado: <b>{planeta?.properties?.name}</b></p>
+        <p>Descripcion del Planeta: <b>{planeta?.properties?.name}</b></p>
         <ul>
             <li>Diametro: {planeta?.properties?.diameter} km </li>
             <li>Periodo de rotación: {planeta?.properties?.rotation_period} horas </li>
@@ -38,7 +38,7 @@ export const DetallePlanetas = (props)=> {
 )};
 
 
-//aqui para retornar el detalle de cada personaje//
+
 export const DetallePersonajes = (props)=> {
 
     const {id} = useParams();
@@ -56,7 +56,7 @@ export const DetallePersonajes = (props)=> {
             <img width={"700"} height={"500"} src="https://pm1.narvii.com/6361/c338000011dddc976bc1e960bf83c6a04402b720_hq.jpg"/>
         </div>
         <div className="row">
-            <h1>Información del personaje: <b>{personaje?.properties?.name}</b></h1>
+            <h1>Información del Personaje: <b>{personaje?.properties?.name}</b></h1>
             <ul>
                 <li>Estatura: {personaje?.properties?.height} cm.</li>
                 <li>Peso: {personaje?.properties?.mass} kg.</li>
@@ -74,7 +74,6 @@ export const DetallePersonajes = (props)=> {
 
 
 
-//aqui para retornar el detalle de las naves//
 export const DetalleNaves = ()=> {
     const {id} = useParams();
     const [nave, setNave] = useState({});
@@ -90,7 +89,7 @@ export const DetalleNaves = ()=> {
 
         <div className="row">
             <div className="col">
-                <p>Aqui va la descripcion de la nave seleccionado: <b>{nave?.properties?.name}</b></p>
+                <p>Descripcion de la Nave: <b>{nave?.properties?.name}</b></p>
                 <ul>
                     <li>Modelo: {nave?.properties?.model} </li>
                     <li>Clase: {nave?.properties?.starship_class} </li>

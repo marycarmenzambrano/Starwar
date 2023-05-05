@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 export const Planetas = () => {
     const {store,actions} = useContext(Context);
     return <div className="container text-center">
-    <h1>LISTADO DE PLANETAS SW</h1>
+    <h1>Planetas</h1>
     <div className="row">
        {store.planetas.map((object,index)=>{
             return <ListadoCard 
@@ -15,7 +15,7 @@ export const Planetas = () => {
                         uid = {object.uid}
                         ruta = {"/planetas/"+object.uid}
                         key = {index}
-                        favorito="🖤"
+                        favorito="🤍"
                     />
        } )}
             

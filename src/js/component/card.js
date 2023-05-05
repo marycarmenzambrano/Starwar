@@ -2,7 +2,7 @@ import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext"; 
 
-//Esta card será para mostrar personajes y planetas según quiera seleccionar el usuario// 
+ 
 export const Card = (props) => {
     return ( 
       <div className="card">
@@ -21,8 +21,7 @@ export const Card = (props) => {
 };
 
 
-//Esta card será para para mostrar varias tarjetas apiladas, como una vista general de //
-//personajes y planetas//
+
 export const ListadoCard = (props) => {
   const { actions } = useContext(Context)
     return (
@@ -43,7 +42,6 @@ export const ListadoCard = (props) => {
 
 
 
-//ESTA CARD ES PARA VER EL DETALLE DE CADA PERSONAJE/NAVE/PLANETA
 
 export const DetalleCard = (props) => {
     return (
