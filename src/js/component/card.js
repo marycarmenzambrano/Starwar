@@ -13,7 +13,7 @@ export const Card = (props) => {
           <h1 className="card-title"> {props.titulo} </h1>
           <p className="card-text"> {props.descripcion} </p>
           <Link to = {props.ruta} >
-            <a className="btn btn-warning"> {props.boton} </a>
+            <a className="btn btn-info"> {props.boton} </a>
           </Link>
         </div>
       </div>
@@ -30,9 +30,9 @@ export const ListadoCard = (props) => {
             <div className="card-body">
                 <h2 className="card-title">{props.titulo} </h2>
                 <Link to={props.ruta}>  
-                  <a className="btn btn-primary" onClick={props.action}>Ver detalle</a> 
+                  <a className="btn btn-secondary" onClick={props.action}>Ver detalle</a> 
                 </Link>
-                <button className="btn btn-danger" onClick={()=>{
+                <button className="btn btn-dark" onClick={()=>{
                   actions.addFav(props.titulo)
                 }}>{props.favorito}</button>
             </div>

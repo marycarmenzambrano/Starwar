@@ -7,8 +7,13 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar- bg-dark mb-3">
 			<Link to="/">
-				<button className="btn btn-secondary m-3">Volver al Home</button>
+				<button className="btn btn-secondary m-3">Home</button>
 			</Link>
+			
+			
+			<img src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254" width="300x" height="100px"></img>
+
+
 			<div className="ml-auto">
 				<div class="btn-group dropstart">
 						<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

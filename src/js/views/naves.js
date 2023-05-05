@@ -14,7 +14,7 @@ export const Naves = () => {
                                         uid={object.uid} 
                                         ruta = {"/naves/"+object.uid}
                                         key={index}
-                                        favorito="🤍"
+                                        favorito="❤️"
                                         
                                      />)
                       })}

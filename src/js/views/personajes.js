@@ -14,7 +14,7 @@ export const Personajes = () =>{
                                         uid = {object.uid}
                                         ruta = {"/personajes/"+object.uid}
                                         key={index}
-                                        favorito="🤍"
+                                        favorito="❤️"
                                         
                                      /> 
                                     

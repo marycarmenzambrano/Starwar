@@ -11,8 +11,8 @@ export const Home = () => (
 			<div className="col">
 				<Card 
 					ruta="/personajes/" 
-					titulo="Personajes de la saga"
-					descripcion="Aqui podrás revisar toda la info de los personajes"
+					titulo="Personajes"
+					descripcion="Aqui Puedes ver Todos los Personajes"
 					boton="Ver+"
 					/>
 			</div>
@@ -21,7 +21,7 @@ export const Home = () => (
 				<Card 
 					ruta="/planetas/"
 					titulo="Planetas"
-					descripcion="Aqui podrás revisar toda la info de los planetas"
+					descripcion="Aqui Puedes ver Todos los Planetas"
 					boton="Ver+"/>
 					
 			</div>
@@ -29,8 +29,8 @@ export const Home = () => (
 			<div className="col">
 				<Card 
 					ruta="/naves/" 
-					titulo="Naves espaciales de la saga"
-					descripcion="Aqui podrás revisar toda la info de los naves que aparecen en la saga"
+					titulo="Naves"
+					descripcion="Aqui Puedes ver Todas las Naves"
 					boton="Ver+"/>
 			</div>
 		</div>
