@@ -12,7 +12,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			personajes:[],
+			planetas:[],
+			naves:[],
+
+			favoritos:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -37,7 +42,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			}
+			},
+			getPersonajes: ()=> {
+				fetch("https://www.swapi.tech/api/people")
+				.then(response=>response.json())
+				.then(data=>setStore({personajes:data.results}))
+
+			},
+			getPlanetas: ()=> {
+				fetch("https://www.swapi.tech/api/planets")
+				.then(response=>response.json())
+				.then(data=>setStore({planetas:data.results}))
+			},
+			getNaves: ()=> {
+				fetch("https://www.swapi.tech/api/starships")
+				.then(response=>response.json())
+				.then(data=>setStore({naves:data.results}))
+
+			},
+			addFav:(titulo)=>{
+				const store = getStore();
+				console.log("Elemento add favoritos: "+titulo)
+				setStore({favoritos:[...store.favoritos,titulo]})
+
+			},
+			deleteFav: (index) => {
+				const store = getStore();
+				const newFavoritos = [...store.favoritos]; // crea una nueva matriz para evitar mutar la matriz original
+				newFavoritos.splice(index, 1); // elimina el elemento en el índice proporcionado
+				setStore({ favoritos: newFavoritos });
+			  },	
 		}
 	};
 };

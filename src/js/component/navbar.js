@@ -1,16 +1,28 @@
-import React from "react";
+import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context)
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-secondary mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<button className="btn btn-warning m-3">Volver al Home</button>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
+				<div class="btn-group dropstart">
+						<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						Mis Favs 🖤
+						</button>
+						<ul class="dropdown-menu">
+							{store.favoritos.map((value,index)=>{
+								return (<li key={index} className="dropdown-item">{value} 
+								<button className="btn btn-secondary m-3"
+								  onClick={()=>{ actions.deleteFav(value.name);
+								  }}>🗑️</button> </li>)
+							})}
+						</ul>
+					</div>
 			</div>
 		</nav>
 	);
